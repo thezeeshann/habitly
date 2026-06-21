@@ -1,4 +1,4 @@
-# Habitly 
+# Habitly 🗒️
 
 A clean, free, no-account habit tracker for macOS — plus the marketing
 landing page that ships with it.
