@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "skills": {
+    "build": {
+      "source": "imgly/agent-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/cesdk/skills/build/SKILL.md",
+      "computedHash": "6d5c2190993d0dec669bdb61995da3efcdb03fe0de81904673cd485a23c19892"
+    },
+    "docs-electron": {
+      "source": "imgly/agent-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/cesdk/skills/docs-electron/SKILL.md",
+      "computedHash": "20c5753ecc43973956487f2f1f7d305e2dedb2569797d201e019a0cea212b101"
+    },
+    "docs-react": {
+      "source": "imgly/agent-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/cesdk/skills/docs-react/SKILL.md",
+      "computedHash": "119e781bb45d5969c9ff0b8967dd70dccc578134977ac507b3c0d765368af9ca"
+    },
+    "explain": {
+      "source": "imgly/agent-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/cesdk/skills/explain/SKILL.md",
+      "computedHash": "68740fe36b405e55f9fb425839b85ed2cb6baa314d831b48b94166c0cb83b5c2"
+    },
+    "vercel-composition-patterns": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/composition-patterns/SKILL.md",
+      "computedHash": "575757e3e25761c8c562d6e395d29f0b76c98b1273c0bd72d88e6ab1bc9c7d42"
+    },
+    "vercel-react-best-practices": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/react-best-practices/SKILL.md",
+      "computedHash": "ca7b0c0c6e5f2750043f7f0cd72d16ac4e2abc48f9b5500d047a4b77a2506212"
+    },
+    "web-design-guidelines": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/web-design-guidelines/SKILL.md",
+      "computedHash": "f3bc47f890f42a44db1007ab390709ec368e4b8c089baee6b0007182236ac474"
+    },
+    "writing-guidelines": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/writing-guidelines/SKILL.md",
+      "computedHash": "25aa3a33a97bddbcb1847ce4a6169106ec25e5b19b15b99c66e75ab383866ef2"
+    }
+  }
+}

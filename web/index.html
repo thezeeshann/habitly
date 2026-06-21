@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Habitly — Build Better Habits</title>
+  <meta name="description" content="A clean desktop app to track daily habits, build streaks, and see real progress — free, forever.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-brand">
+      <div class="logo-mark">✦</div>
+      <span class="nav-title">Habitly</span>
+    </div>
+    <div class="nav-links">
+      <a href="#features" class="nav-link">Features</a>
+      <a href="#how" class="nav-link">How it works</a>
+      <a href="#download" class="nav-link nav-link--cta">Download free</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-blob hero-blob--right"></div>
+    <div class="hero-blob hero-blob--left"></div>
+
+    <div class="hero-badge a1">
+      <span class="hero-badge-dot"></span>
+      100% Free · macOS · No account needed
+    </div>
+
+    <h1 class="hero-title a2">
+      Small habits,<br>
+      <span class="hero-title-accent">big results.</span>
+    </h1>
+
+    <p class="hero-sub a3">
+      A clean desktop app to track daily habits, build streaks, and see real progress — free, forever.
+    </p>
+
+    <div class="hero-actions a4">
+      <a href="#download" class="btn btn--dark">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2v9M4.5 8l3.5 3 3.5-3M2.5 13.5h11" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Download for macOS
+      </a>
+      <span class="hero-actions-note">Free forever · No sign-up</span>
+    </div>
+
+    <div class="hero-mock-wrap a5">
+      <div class="mock">
+        <div class="mock-titlebar">
+          <span class="mock-dot mock-dot--red"></span>
+          <span class="mock-dot mock-dot--yellow"></span>
+          <span class="mock-dot mock-dot--green"></span>
+          <span class="mock-titlebar-label">Habitly</span>
+        </div>
+        <div class="mock-body">
+          <aside class="mock-sidebar">
+            <div class="mock-sidebar-brand">
+              <div class="mock-sidebar-logo">✦</div>
+              <span class="mock-sidebar-title">Habitly</span>
+            </div>
+            <nav class="mock-nav">
+              <div class="mock-nav-item mock-nav-item--active">
+                <span class="mock-nav-icon">☀️</span>
+                <span class="mock-nav-label">Today</span>
+                <span class="mock-nav-badge">4</span>
+              </div>
+              <div class="mock-nav-item">
+                <span class="mock-nav-icon">📅</span>
+                <span class="mock-nav-label mock-nav-label--muted">Weekly</span>
+              </div>
+              <div class="mock-nav-item">
+                <span class="mock-nav-icon">📊</span>
+                <span class="mock-nav-label mock-nav-label--muted">Progress</span>
+              </div>
+            </nav>
+            <div class="mock-nav-item mock-nav-item--settings">
+              <span class="mock-nav-icon">⚙️</span>
+              <span class="mock-nav-label mock-nav-label--settings">Settings</span>
+            </div>
+          </aside>
+          <div class="mock-main">
+            <div class="mock-main-header">
+              <div>
+                <h2 class="mock-main-heading">Today</h2>
+                <p class="mock-main-date">Friday, June 20 · 2 of 6 done</p>
+              </div>
+              <div class="mock-add-btn">+ Add habit</div>
+            </div>
+            <div class="mock-progress">
+              <div class="mock-progress-bar"></div>
+            </div>
+            <div class="mock-habit-list">
+              <div class="mock-habit mock-habit--done">
+                <span class="mock-habit-check"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2L7.5 2" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <span class="mock-habit-icon">🏃</span>
+                <span class="mock-habit-name mock-habit-name--done">Morning Run</span>
+                <span class="mock-habit-streak mock-habit-streak--done">12 🔥</span>
+              </div>
+              <div class="mock-habit mock-habit--done">
+                <span class="mock-habit-check"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2L7.5 2" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <span class="mock-habit-icon">🧘</span>
+                <span class="mock-habit-name mock-habit-name--done">Meditate</span>
+                <span class="mock-habit-streak mock-habit-streak--done">7 🔥</span>
+              </div>
+              <div class="mock-habit">
+                <span class="mock-habit-circle"></span>
+                <span class="mock-habit-icon">📚</span>
+                <span class="mock-habit-name">Read 30 min</span>
+                <span class="mock-habit-streak">8 🔥</span>
+              </div>
+              <div class="mock-habit">
+                <span class="mock-habit-circle"></span>
+                <span class="mock-habit-icon">💧</span>
+                <span class="mock-habit-name">Drink Water</span>
+                <span class="mock-habit-streak">5 🔥</span>
+              </div>
+              <div class="mock-habit">
+                <span class="mock-habit-circle"></span>
+                <span class="mock-habit-icon">✍️</span>
+                <span class="mock-habit-name">Journal</span>
+                <span class="mock-habit-streak">9 🔥</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <span class="section-label">Why Habitly</span>
+    <h2 class="section-title">Everything you need,<br>nothing you don't.</h2>
+    <div class="features-grid">
+      <div class="feature-card feature-card--pink">
+        <div class="feature-icon">📋</div>
+        <h3 class="feature-title">Add &amp; manage habits</h3>
+        <p class="feature-desc">Create, rename, update, or delete habits anytime.</p>
+      </div>
+      <div class="feature-card feature-card--purple">
+        <div class="feature-icon">📊</div>
+        <h3 class="feature-title">Progress visualization</h3>
+        <p class="feature-desc">Streaks, charts, and weekly views to keep you going.</p>
+      </div>
+      <div class="feature-card feature-card--blue">
+        <div class="feature-icon">🔒</div>
+        <h3 class="feature-title">No account required</h3>
+        <p class="feature-desc">Your data stays on your device. No sign-up ever.</p>
+      </div>
+      <div class="feature-card feature-card--green">
+        <div class="feature-icon">🎁</div>
+        <h3 class="feature-title">100% free forever</h3>
+        <p class="feature-desc">No subscriptions, no purchases. Just download and use.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="how" id="how">
+    <div class="how-inner">
+      <span class="section-label">How it works</span>
+      <h2 class="section-title">Simple by design.</h2>
+      <div class="steps-grid">
+        <div class="step">
+          <div class="step-icon">+</div>
+          <div class="step-num">Step 1</div>
+          <h3 class="step-title">Add your habits</h3>
+          <p class="step-desc">Create habits with custom names. Rename or delete anytime.</p>
+        </div>
+        <div class="step">
+          <div class="step-icon step-icon--check">✓</div>
+          <div class="step-num">Step 2</div>
+          <h3 class="step-title">Check in daily</h3>
+          <p class="step-desc">Open the app each day and tick off what you've done.</p>
+        </div>
+        <div class="step">
+          <div class="step-icon step-icon--arrow">↑</div>
+          <div class="step-num">Step 3</div>
+          <h3 class="step-title">Watch streaks grow</h3>
+          <p class="step-desc">See your consistency build with streaks and visual charts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="download">
+    <div class="cta-inner">
+      <div class="cta-icon">✦</div>
+      <h2 class="cta-title">Start building better<br>habits today.</h2>
+      <p class="cta-sub">Free, forever. No account. No subscription.<br>Just download and go.</p>
+      <a href="#" class="btn btn--gradient">
+        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.5 2.5v9M5 8.5l3.5 3.5 3.5-3.5M3 14h11" stroke="white" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Download Habitly for macOS
+      </a>
+      <div class="cta-meta">
+        <span>macOS 12+</span>
+        <span class="cta-meta-dot">·</span>
+        <span>Free forever</span>
+        <span class="cta-meta-dot">·</span>
+        <span>No sign-up</span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-brand">
+      <div class="logo-mark logo-mark--small">✦</div>
+      <span class="footer-title">Habitly</span>
+    </div>
+    <span class="footer-copy">© 2026 · Free forever · Made with care</span>
+  </footer>
+
+</body>
+</html>
