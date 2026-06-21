@@ -740,6 +740,17 @@ body {
   color: rgba(255, 255, 255, .18);
 }
 
+.cta-gatekeeper-note {
+  margin-top: 14px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, .28);
+}
+
+.cta-gatekeeper-note strong {
+  color: rgba(255, 255, 255, .45);
+  font-weight: 600;
+}
+
 /* Footer */
 
 .footer {
