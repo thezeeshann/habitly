@@ -9,6 +9,7 @@ const config: ForgeConfig = {
   packagerConfig: {
     name: 'Habitly',
     asar: true,
+    icon: './build/icon',
   },
   rebuildConfig: {},
   makers: [new MakerZIP({}, ['darwin']), new MakerDMG({}, ['darwin'])],
