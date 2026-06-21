@@ -10,6 +10,8 @@ const config: ForgeConfig = {
     name: 'Habitly',
     asar: true,
     icon: './build/icon',
+    appBundleId: 'com.thezeeshann.habitly',
+    appCategoryType: 'public.app-category.productivity',
   },
   rebuildConfig: {},
   makers: [new MakerZIP({}, ['darwin']), new MakerDMG({}, ['darwin'])],
