@@ -5,12 +5,14 @@ import CircularProgress from '../components/circular-progress';
 
 interface TodayViewProps {
   habits: Habit[];
+  showStreaks: boolean;
+  showCompletionPercent: boolean;
   onToggleToday: (habitId: string) => void;
   onEditHabit: (habitId: string) => void;
   onDeleteHabit: (habitId: string) => void;
 }
 
-function TodayView({ habits, onToggleToday, onEditHabit, onDeleteHabit }: TodayViewProps) {
+function TodayView({ habits, showStreaks, showCompletionPercent, onToggleToday, onEditHabit, onDeleteHabit }: TodayViewProps) {
   const doneCount = habits.filter((h) => h.completions[TODAY_INDEX]).length;
   const percent = habits.length === 0 ? 0 : Math.round((doneCount / habits.length) * 100);
 
@@ -23,15 +25,17 @@ function TodayView({ habits, onToggleToday, onEditHabit, onDeleteHabit }: TodayV
             {TODAY_LABEL} · {doneCount} of {habits.length} done
           </p>
         </div>
-        <div className="today-header-right">
-          <div className="today-count">
-            <div className="today-count-value">
-              {doneCount}/{habits.length}
+        {showCompletionPercent && (
+          <div className="today-header-right">
+            <div className="today-count">
+              <div className="today-count-value">
+                {doneCount}/{habits.length}
+              </div>
+              <div className="today-count-label">completed</div>
             </div>
-            <div className="today-count-label">completed</div>
+            <CircularProgress percent={percent} />
           </div>
-          <CircularProgress percent={percent} />
-        </div>
+        )}
       </div>
 
       <div className="progress-track">
@@ -49,16 +53,18 @@ function TodayView({ habits, onToggleToday, onEditHabit, onDeleteHabit }: TodayV
                 aria-label={done ? `Mark ${habit.name} as not done` : `Mark ${habit.name} as done`}
               >
                 {done && (
-                  <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
+                  <svg width="8" height="8" viewBox="0 0 11 11" fill="none">
                     <path d="M2 5.5l2.5 2.5L9 2.5" stroke="white" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 )}
               </button>
               <span className="habit-row-icon">{habit.icon}</span>
               <span className={`habit-row-name${done ? ' habit-row-name--done' : ''}`}>{habit.name}</span>
-              <span className={`habit-row-streak${done ? ' habit-row-streak--done' : ''}`}>
-                {habit.streak} day streak 🔥
-              </span>
+              {showStreaks && (
+                <span className={`habit-row-streak${done ? ' habit-row-streak--done' : ''}`}>
+                  {habit.streak} day streak 🔥
+                </span>
+              )}
               <div className="habit-row-actions">
                 <span className="habit-row-action" onClick={() => onEditHabit(habit.id)}>✏️</span>
                 <span className="habit-row-action" onClick={() => onDeleteHabit(habit.id)}>🗑️</span>

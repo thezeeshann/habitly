@@ -5,6 +5,7 @@ declare global {
     habitly: {
       load: () => Promise<PersistedState | null>;
       save: (state: PersistedState) => Promise<void>;
+      getVersion: () => Promise<string>;
     };
   }
 }

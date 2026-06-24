@@ -21,6 +21,8 @@ This repo holds two separate things:
 - **Weekly** — a 7-day grid of done/missed/pending per habit.
 - **Progress** — best streak, this week's completion rate, and a **Month**
   tab that graphs your real day-by-day completion history.
+- **Settings** — light/dark/system theme, 5 accent colors, week-start day,
+  show/hide streaks & completion %, a daily reminder, and a full data reset.
 - Data persists locally (`electron-store`) — nothing leaves your machine,
   no account, no network calls. See [`SECURITY.md`](./SECURITY.md).
 
@@ -36,11 +38,12 @@ This repo holds two separate things:
 ```
 src/
   lib/
-    store/        # electron-store setup (main) + contextBridge API (preload)
-    data/seed.ts   # demo habit data
-    types.ts       # shared types (Habit, HistoryEntry, PersistedState)
+    store/                  # electron-store setup (main) + contextBridge API (preload)
+    data/seed.ts             # demo habit data
+    constants/accent-colors.ts  # accent color presets used by Settings
+    types.ts                 # shared types (Habit, HistoryEntry, AppSettings, PersistedState)
   components/      # title-bar, sidebar, habit-modal, circular-progress
-  views/           # today-view, weekly-view, progress-view
+  views/           # today-view, weekly-view, progress-view, settings-view
   App.tsx, main.ts, preload.ts, renderer.tsx, global.d.ts, index.css
 web/
   index.html, styles.css, assets/   # landing page + favicon/OG images
@@ -86,6 +89,36 @@ npx tsc --noEmit       # type-check
 in `web/index.html` with the deployed absolute URL once it's live, and swap
 the "Download for macOS" links from `#` to the real `.dmg` (e.g. a GitHub
 Release asset).
+
+Once the repo is imported via Vercel's GitHub integration, every push to
+`main` auto-deploys — no GitHub Actions workflow needed. To skip rebuilding
+when only `src/` (the desktop app) changes, set an **Ignored Build Step** in
+Vercel → Project Settings → Git:
+
+```bash
+git diff --quiet HEAD^ HEAD -- web
+```
+
+(exit code 0 = no `web/` changes = skip the build; non-zero = deploy.)
+
+## Versioning & changelog
+
+This project follows [Semantic Versioning](https://semver.org/), tracked in
+`package.json`'s `version` field, with history kept in
+[`CHANGELOG.md`](./CHANGELOG.md) using the
+[Keep a Changelog](https://keepachangelog.com/en/1.1.0/) format.
+
+To cut a release:
+
+1. Move the relevant `[Unreleased]` entries under a new `## [x.y.z] - YYYY-MM-DD`
+   heading in `CHANGELOG.md`.
+2. Bump `version` in `package.json` to match.
+3. `yarn make` to build, tag the commit (`git tag vX.Y.Z`), and publish a
+   GitHub Release with the built `.dmg`/`.zip` attached.
+
+The desktop app's Settings → About screen always shows the real running
+version (read live via Electron's `app.getVersion()`), so it can't drift
+out of sync with `package.json`.
 
 ## License
 

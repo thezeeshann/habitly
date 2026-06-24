@@ -11,7 +11,7 @@ function CircularProgress({ percent }: CircularProgressProps) {
   return (
     <div className="ring">
       <svg width="52" height="52" viewBox="0 0 52 52">
-        <circle cx="26" cy="26" r={RADIUS} fill="none" stroke="#f0e8f4" strokeWidth="5" />
+        <circle cx="26" cy="26" r={RADIUS} fill="none" style={{ stroke: 'var(--ring-track)' }} strokeWidth="5" />
         <circle
           cx="26"
           cy="26"
@@ -26,8 +26,8 @@ function CircularProgress({ percent }: CircularProgressProps) {
         />
         <defs>
           <linearGradient id="ring-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#c840a0" />
-            <stop offset="100%" stopColor="#7030c0" />
+            <stop offset="0%" style={{ stopColor: 'var(--accent-magenta)' }} />
+            <stop offset="100%" style={{ stopColor: 'var(--accent-deep-purple)' }} />
           </linearGradient>
         </defs>
       </svg>

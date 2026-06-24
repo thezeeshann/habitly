@@ -1,14 +1,16 @@
 import type { Habit } from '../lib/types';
 
-export type ViewKey = 'today' | 'weekly' | 'progress';
+export type ViewKey = 'today' | 'weekly' | 'progress' | 'settings';
 
 interface SidebarProps {
   habits: Habit[];
   activeView: ViewKey;
   todayRemaining: number;
   dimmed?: boolean;
+  isDark: boolean;
   onSelectView: (view: ViewKey) => void;
   onEditHabit: (habitId: string) => void;
+  onToggleDark: (dark: boolean) => void;
 }
 
 const NAV_ITEMS: { key: ViewKey; icon: string; label: string }[] = [
@@ -17,7 +19,7 @@ const NAV_ITEMS: { key: ViewKey; icon: string; label: string }[] = [
   { key: 'progress', icon: '📊', label: 'Progress' },
 ];
 
-function Sidebar({ habits, activeView, todayRemaining, dimmed, onSelectView, onEditHabit }: SidebarProps) {
+function Sidebar({ habits, activeView, todayRemaining, dimmed, isDark, onSelectView, onEditHabit, onToggleDark }: SidebarProps) {
   return (
     <aside className={`sidebar${dimmed ? ' sidebar--dimmed' : ''}`}>
       <nav className="sidebar-nav">
@@ -50,9 +52,22 @@ function Sidebar({ habits, activeView, todayRemaining, dimmed, onSelectView, onE
       </div>
 
       <div className="sidebar-divider" />
-      <div className="sidebar-nav-item sidebar-nav-item--settings">
+      <div
+        className={`sidebar-nav-item sidebar-nav-item--settings${activeView === 'settings' ? ' sidebar-nav-item--active' : ''}`}
+        onClick={() => onSelectView('settings')}
+      >
         <span className="sidebar-nav-icon">⚙️</span>
-        <span className="sidebar-nav-label">Settings</span>
+        <span className={`sidebar-nav-label${activeView === 'settings' ? ' sidebar-nav-label--active' : ''}`}>
+          Settings
+        </span>
+      </div>
+      <div className="sidebar-theme-toggle">
+        <div className={`sidebar-theme-pill${!isDark ? ' sidebar-theme-pill--active' : ''}`} onClick={() => onToggleDark(false)}>
+          <span>☀️</span>
+        </div>
+        <div className={`sidebar-theme-pill${isDark ? ' sidebar-theme-pill--active' : ''}`} onClick={() => onToggleDark(true)}>
+          <span>🌙</span>
+        </div>
       </div>
     </aside>
   );

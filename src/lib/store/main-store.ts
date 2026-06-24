@@ -1,7 +1,7 @@
-import { ipcMain } from 'electron';
+import { app, ipcMain } from 'electron';
 import Store from 'electron-store';
 import type { PersistedState } from '../types';
-import { STORE_LOAD_CHANNEL, STORE_SAVE_CHANNEL } from './channels';
+import { APP_VERSION_CHANNEL, STORE_LOAD_CHANNEL, STORE_SAVE_CHANNEL } from './channels';
 
 export function registerStoreHandlers(): void {
   const store = new Store<{ state?: PersistedState }>();
@@ -10,4 +10,5 @@ export function registerStoreHandlers(): void {
   ipcMain.handle(STORE_SAVE_CHANNEL, (_event, state: PersistedState) => {
     store.set('state', state);
   });
+  ipcMain.handle(APP_VERSION_CHANNEL, (): string => app.getVersion());
 }
