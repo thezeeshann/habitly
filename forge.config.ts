@@ -12,9 +12,6 @@ const config: ForgeConfig = {
     icon: './build/icon',
     appBundleId: 'com.thezeeshann.habitly',
     appCategoryType: 'public.app-category.productivity',
-    osxSign: {
-      identity: '-',
-    },
   },
   rebuildConfig: {},
   makers: [new MakerZIP({}, ['darwin']), new MakerDMG({}, ['darwin'])],

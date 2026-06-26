@@ -1,7 +1,7 @@
 {
   "name": "habitly",
   "productName": "Habitly",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Habitly desktop app",
   "main": ".vite/build/main.js",
   "private": true,

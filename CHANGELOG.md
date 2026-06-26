@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.2] - 2026-06-26
+
+### Fixed
+
+- Removed ad-hoc `osxSign` that was added in v1.1.1 — it conflicted with the
+  embedded ASAR integrity fuse and made Gatekeeper's "damaged" error worse.
+- Landing page: replaced the near-invisible Gatekeeper footnote with a
+  prominent, styled "First-time macOS setup" box showing the exact
+  `xattr -cr` steps users need to open the app.
+
 ## [1.1.1] - 2026-06-26
 
 ### Fixed

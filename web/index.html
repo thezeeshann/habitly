@@ -207,7 +207,7 @@
       <div class="cta-icon">✦</div>
       <h2 class="cta-title">Start building better<br>habits today.</h2>
       <p class="cta-sub">Free, forever. No account. No subscription.<br>Just download and go.</p>
-      <a href="https://github.com/thezeeshann/habitly/releases/download/v1.1.1/Habitly-1.1.1-arm64.dmg" class="btn btn--gradient">
+      <a href="https://github.com/thezeeshann/habitly/releases/download/v1.1.2/Habitly-1.1.2-arm64.dmg" class="btn btn--gradient">
         <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.5 2.5v9M5 8.5l3.5 3.5 3.5-3.5M3 14h11" stroke="white" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
         Download Habitly for macOS
       </a>
@@ -218,11 +218,16 @@
         <span class="cta-meta-dot">·</span>
         <span>No sign-up</span>
       </div>
-      <p class="cta-gatekeeper-note">
-        If macOS says the app is "damaged and can't be opened", open Terminal and run:<br>
-        <code>xattr -cr /Applications/Habitly.app</code><br>
-        then open the app again. This removes the quarantine flag macOS adds to downloaded apps.
-      </p>
+      <div class="install-steps">
+        <p class="install-steps-title">First-time macOS setup</p>
+        <ol class="install-steps-list">
+          <li>Open the DMG and drag <strong>Habitly</strong> to <strong>Applications</strong></li>
+          <li>Open <strong>Terminal</strong> (⌘ Space → type "terminal")</li>
+          <li>Run this command, then open the app:</li>
+        </ol>
+        <div class="install-steps-cmd">xattr -cr /Applications/Habitly.app</div>
+        <p class="install-steps-note">macOS quarantines apps downloaded from the internet. This one-time command lifts the block — Habitly is safe and stores everything locally on your machine.</p>
+      </div>
     </div>
   </section>
 
