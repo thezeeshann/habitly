@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.1] - 2026-06-26
+
+### Fixed
+
+- macOS Gatekeeper: added ad-hoc code signing (`osxSign`) to the build so
+  the app no longer shows "damaged and can't be opened" on first launch.
+- Landing page and README now include the `xattr -cr` workaround instruction
+  for users who still see a Gatekeeper warning after downloading.
+
 ## [1.1.0] - 2026-06-24
 
 ### Added
