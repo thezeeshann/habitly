@@ -51,6 +51,20 @@ build/
 design/                             # original design mockups (reference only)
 ```
 
+## Installation
+
+Download the latest `.dmg` from [Releases](https://github.com/thezeeshann/habitly/releases).
+
+### macOS — "damaged and can't be opened"
+
+If macOS blocks the app after opening the DMG, run this in Terminal:
+
+```sh
+xattr -cr /Applications/Habitly.app
+```
+
+Then open the app normally. This removes the quarantine flag macOS places on apps downloaded from the internet. Habitly is unsigned because it's an independent project without an Apple Developer subscription — all data stays local on your machine.
+
 ## Getting started
 
 ```bash

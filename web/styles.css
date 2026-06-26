@@ -752,6 +752,18 @@ body {
   font-weight: 600;
 }
 
+.cta-gatekeeper-note code {
+  display: inline-block;
+  margin: 4px 0;
+  padding: 2px 7px;
+  background: rgba(255, 255, 255, .08);
+  border-radius: 5px;
+  font-family: ui-monospace, monospace;
+  font-size: 11px;
+  color: rgba(255, 255, 255, .6);
+  letter-spacing: 0.02em;
+}
+
 /* Footer */
 
 .footer {
